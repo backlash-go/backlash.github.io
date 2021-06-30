@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>画板</title>
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+<canvas id="canvas"></canvas>
+
+<script>
+    let canvas = document.getElementById('canvas');
+    canvas.width = document.documentElement.clientWidth;
+    canvas.height = document.documentElement.clientHeight;
+    let ctx = canvas.getContext("2d");
+    ctx.fillStyle = "black";
+    ctx.strokeStyle = 'none';
+
+    let painting = false;
+
+    canvas.onmousedown = (e) => {
+        painting = true;
+    }
+
+    canvas.onmousemove = (e) => {
+        if (painting === true) {
+            // ctx.fillRect(e.clientX - 5, e.clientY - 5, 10, 10)
+            ctx.beginPath();
+            ctx.arc(e.clientX,e.clientY,10,0,2 * Math.PI)
+            ctx.stroke();
+            ctx.fill()
+        } else {
+            console.log("do nothing")
+        }
+    }
+    canvas.onmouseup = (e) => {
+        painting = false
+    }
+
+
+</script>
+</body>
+</html>
