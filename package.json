@@ -1,0 +1,15 @@
+{
+  "name": "backlash.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/backlash-go/backlash.github.io.git",
+  "author": "xixianbin <xxb466711901@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.9.10"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs  --temp .temp",
+    "build": "vuepress build docs"
+  }
+}
