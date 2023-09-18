@@ -1,10 +1,10 @@
 # npm
 ./disk
-package-lock.json
+#package-lock.json
 node_modules
 report.*
 # yarn
-yarn.lock
+#yarn.lock
 yar-error.log
 # vscode
 .vscode
